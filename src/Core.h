@@ -4,6 +4,8 @@
 #define CORE_H
 
 #include "Map.h"
+#include "GDTestClass.h"
+#include <memory>
 
 class CCore
 {
@@ -11,6 +13,9 @@ private:
 	SDL_Window* window;
 	SDL_Renderer* rR;
 	SDL_Event* mainEvent;
+
+	std::unique_ptr<GDTestClass> gdTestClass;
+	uint64_t ticks;
 
 	// ----- FPS -----
 

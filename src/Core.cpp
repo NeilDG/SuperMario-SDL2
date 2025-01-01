@@ -4,6 +4,7 @@
 #include "CFG.h"
 #include "Text.h"
 #include "SDL_mixer.h"
+#include <iostream>
 
 /* ******************************************** */
 
@@ -70,6 +71,8 @@ CCore::CCore(void) {
 	CCFG::keyIDD = SDLK_d;
 	CCFG::keyIDSpace = SDLK_SPACE;
 	CCFG::keyIDShift = SDLK_LSHIFT;
+
+	this->gdTestClass = std::make_unique<GDTestClass>(99, "dlsugamelab-native");
 }
 
 CCore::~CCore(void) {
@@ -111,6 +114,11 @@ void CCore::mainLoop() {
 		
 		if(SDL_GetTicks() - frameTime < MIN_FRAME_TIME) {
 			SDL_Delay(MIN_FRAME_TIME - (SDL_GetTicks () - frameTime));
+		}
+
+		this->ticks = SDL_GetTicks64();
+		if (this->ticks % 200 == 0) {
+			this->gdTestClass->doSomething();
 		}
 	}
 }
