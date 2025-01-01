@@ -79,14 +79,13 @@ void AboutMenu::Update() {
 }
 
 void AboutMenu::Draw(SDL_Renderer* rR) {
-	CCFG::getText()->DrawWS(rR, "MARIO V 1.03 - C++ AND SDL2", 150, 128, 0, 0, 0);
-	CCFG::getText()->DrawWS(rR, "AUTOR: LUKASZ JAKOWSKI", 150, 146, 0, 0, 0);
+	CCFG::getText()->DrawWS(rR, "MARIO V 1.04 - C++ AND SDL2", 50, 128, 0, 0, 0);
+	CCFG::getText()->DrawWS(rR, "PRIMARY AUTHOR: LUKASZ JAKOWSKI 2014", 50, 146, 0, 0, 0);
+	CCFG::getText()->DrawWS(rR, "EXTENDED BY: NEIL PATRICK DEL GALLEGO, PH.D.", 50, 165, 0, 0, 0);
+	CCFG::getText()->DrawWS(rR, "AND DLSU GAME LAB 2025", 50, 190, 0, 0, 0);
 
-	CCFG::getText()->DrawWS(rR, "INFORMATYKA INZ 2012-2016", 150, 188, 0, 0, 0);
-	CCFG::getText()->DrawWS(rR, "UNIWERSYTET SLASKI W KATOWICACH", 150, 206, 0, 0, 0);
-	CCFG::getText()->DrawWS(rR, "MAJ 2014", 150, 224, 0, 0, 0);
-
-	CCFG::getText()->DrawWS(rR, "WWW.LUKASZJAKOWSKI.PL", 150, 264, 0, 0, 0);
+	CCFG::getText()->DrawWS(rR, "WWW.LUKASZJAKOWSKI.PL", 50, 264, 0, 0, 0);
+	CCFG::getText()->DrawWS(rR, "WWW.FACEBOOK.COM/DLSUGAMELAB", 50, 315, 0, 0, 0);
 
 	//CCFG::getText()->DrawWS(rR, std::to_string(iNumOfUnits), 5, CCFG::GAME_HEIGHT - 21, 0, 0, 0);
 
